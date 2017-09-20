@@ -59,7 +59,7 @@ public class DrawableObjectList{
      */
     public void drawAll(Graphics g) {
     	
-    	for(int i=list.size(); i>=0; i--) {
+    	for(int i=0; i<list.size(); i++) {
     	    Drawable d2 = list.get(i);
     	    if(d2.isVisible()){
     	    	d2.draw(g);
@@ -78,7 +78,7 @@ public class DrawableObjectList{
      * @param factor the factor by which to scale the Scaleable objects.
      */
     public void scaleAll(double factor) {
-    	for(int i=list.size()-1; i>=0; i--) {
+    	for(int i=0; i<list.size();i++) {
     		Drawable d2 = list.get(i);
     		if(d2 instanceof Scaleable) {
     			((Scaleable)d2).scale(factor);
