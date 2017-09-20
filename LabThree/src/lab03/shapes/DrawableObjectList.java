@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * objects to be drawn on the screen. This class also provides methods for
  * drawing or scaling all of the objects.
  */
-public class DrawableObjectList implements Drawable{
+public class DrawableObjectList{
 	ArrayList<Drawable> list;
 	
     /**
@@ -45,6 +45,7 @@ public class DrawableObjectList implements Drawable{
      * @param obj the Drawable object to remove.
      */
     public void removeDrawable(Drawable obj) {
+    	list.remove(obj);
     }
 
     /**
@@ -57,7 +58,16 @@ public class DrawableObjectList implements Drawable{
      * @param g the Graphics object on which to draw the objects.
      */
     public void drawAll(Graphics g) {
+    	
+    	for(int i=list.size(); i>=0; i--) {
+    	    Drawable d2 = list.get(i);
+    	    if(d2.isVisible()){
+    	    	d2.draw(g);
+    		}
+    	}
     }
+
+
 
     /**
      * Scale each of the Drawable objects that also implement the Scaleable
@@ -68,5 +78,11 @@ public class DrawableObjectList implements Drawable{
      * @param factor the factor by which to scale the Scaleable objects.
      */
     public void scaleAll(double factor) {
+    	for(int i=list.size()-1; i>=0; i--) {
+    		Drawable d2 = list.get(i);
+    		if(d2 instanceof Scaleable) {
+    			((Scaleable)d2).scale(factor);
+    		}
+    	}
     }
 }
