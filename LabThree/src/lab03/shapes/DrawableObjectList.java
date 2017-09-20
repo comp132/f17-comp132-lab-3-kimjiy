@@ -1,6 +1,7 @@
 package lab03.shapes;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 /**
  * A DrawableObjectList is a collection of Objects that implement the Drawable
@@ -8,12 +9,15 @@ import java.awt.*;
  * objects to be drawn on the screen. This class also provides methods for
  * drawing or scaling all of the objects.
  */
-public class DrawableObjectList {
-
+public class DrawableObjectList implements Drawable{
+	ArrayList<Drawable> list;
+	
     /**
      * Construct a new empty DrawableObjectList.
      */
     public DrawableObjectList() {
+    	
+    	 list = new ArrayList<Drawable>();
     }
 
     /**
@@ -22,7 +26,7 @@ public class DrawableObjectList {
      * @return the size of the list.
      */
     public int getSize() {
-        return -1;
+        return list.size();
     }
 
     /**
@@ -31,6 +35,7 @@ public class DrawableObjectList {
      * @param obj the Drawable object to be added.
      */
     public void addDrawable(Drawable obj) {
+    	list.add(obj);
     }
 
     /**
