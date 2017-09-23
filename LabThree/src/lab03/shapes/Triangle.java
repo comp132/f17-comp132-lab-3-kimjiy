@@ -20,9 +20,8 @@ import java.awt.Graphics;
 	     * initRadius and color indicated by initColor. The new Triangle is visible by
 	     * default.
 	     * 
-	     * @param initX the x coordinate of the center of the circle.
-	     * @param initY the y coordinate of the center of the circle.
-	     * @param initRadius the radius of the circle.
+	     * @param initX the x coordinate of the center of the triangle.
+	     * @param initY the y coordinate of the center of the triangle.
 	     * @param initColor the color of the circle.
 	     */
 	    public Triangle(int initX1, int initX2, int initX3, int initY1, int initY2, int initY3,
@@ -36,6 +35,20 @@ import java.awt.Graphics;
 	    	
 	        theColor = initColor;
 	        isVisible = true;
+	    }
+	    
+	    /**
+	     * translate the triangle to by given unit (x,y) in the current coordinate system.
+	     * 
+	     */
+	    public void translate (int x, int y) {
+	    	xPoint[0] = xPoint[0] + x;
+	    	xPoint[1] = xPoint[1] + x;
+	    	xPoint[2] = xPoint[2] + x;
+	    	yPoint[0] = yPoint[0] + y;
+	    	yPoint[1] = yPoint[1] + y;
+	    	yPoint[2] = yPoint[2] + y;
+	    	
 	    }
 
 	    // === Implementation of the Drawable interface ===
