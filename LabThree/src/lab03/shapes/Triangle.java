@@ -37,6 +37,14 @@ import java.awt.Graphics;
 	        isVisible = true;
 	    }
 	    
+	    /**return the array of triangle for xPoints.
+	     * 
+	     */
+	    
+	    public void getXPoints() {
+	
+	    }
+	    
 	    /**
 	     * translate the triangle to by given unit (x,y) in the current coordinate system.
 	     * 
