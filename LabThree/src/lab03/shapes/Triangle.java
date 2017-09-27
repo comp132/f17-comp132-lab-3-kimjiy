@@ -16,13 +16,13 @@ import java.awt.Graphics;
 		private boolean isVisible;
 
 		 /**
-	     * Construct a new Triangle centered at initX, initY with a radius of
-	     * initRadius and color indicated by initColor. The new Triangle is visible by
+	     * Construct a new Triangle with x and y coordinates in the arraylist.
+	     * The color indicated by initColor. The new Triangle is visible by
 	     * default.
 	     * 
-	     * @param initX the x coordinate of the center of the triangle.
-	     * @param initY the y coordinate of the center of the triangle.
-	     * @param initColor the color of the circle.
+	     * @param initX the x coordinate of this triangle.
+	     * @param initY the y coordinate of this triangle.
+	     * @param initColor the color of the triangle.
 	     */
 	    public Triangle(int initX1, int initX2, int initX3, int initY1, int initY2, int initY3,
 	    			  Color initColor) {
@@ -36,14 +36,7 @@ import java.awt.Graphics;
 	        theColor = initColor;
 	        isVisible = true;
 	    }
-	    
-	    /**return the array of triangle for xPoints.
-	     * 
-	     */
-	    
-	    public void getXPoints() {
-	
-	    }
+	  
 	    
 	    /**
 	     * translate the triangle to by given unit (x,y) in the current coordinate system.

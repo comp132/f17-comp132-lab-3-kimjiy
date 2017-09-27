@@ -30,7 +30,7 @@ public class HallowsSymbol {
         DrawingTablet tablet = new DrawingTablet("Hallows Symbol", 200, 200, objList);
 
         // Create a green triangle at the center of the screen.
-        Triangle t1 = new Triangle(0,50,100,0,90,0, Color.orange);
+        Triangle t1 = new Triangle (0,50,100,0,90,0, Color.orange);
         objList.addDrawable(t1);
         
         /*
@@ -68,8 +68,16 @@ public class HallowsSymbol {
         //sleeps for three seconds
         AnimationTimer.sleep(3000);
         
-     // Change the color and repaint.
+        // Change the color and repaint.
         r1.setColor(Color.red);
+        tablet.repaint();
+        
+        //move the symbols.
+        t1.translate(50, 70);
+        c1.translate(50, 70);
+        r1.translate(50, 70);
+        
+        //repaint!
         tablet.repaint();
 	}
 }
